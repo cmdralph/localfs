@@ -1,4 +1,4 @@
-# 🚀 LocalServer
+# 🚀 LocalFS
 
 A fast, lightweight **local development server written in C** for macOS.  
 Designed for serving static websites with a clean CLI workflow and useful developer features.
@@ -16,12 +16,12 @@ xcode-select --install
 
 ### 2. Compile
 ```bash
-cc -Wall -Wextra -O2 main.c -o localserver -pthread
+cc -Wall -Wextra -O2 main.c -o localfs -pthread
 ```
 
 ### 3. Run
 ```bash
-./localserver --folder ./site --port 8080
+./localfs --folder ./site --port 8080
 ```
 
 ---
@@ -30,30 +30,30 @@ cc -Wall -Wextra -O2 main.c -o localserver -pthread
 
 ### Serve one folder
 ```bash
-./localserver --folder ./site
+./localfs --folder ./site
 ```
 ➡️ Runs at: `http://127.0.0.1:8080`
 
 ### Custom port
 ```bash
-./localserver --folder ./site --port 3000
+./localfs --folder ./site --port 3000
 ```
 
 ### Multiple folders
 ```bash
-./localserver \
+./localfs \
   --folder ./site1 --port 8080 \
   --folder ./site2 --port 8081
 ```
 
 ### Custom host
 ```bash
-./localserver --host 127.0.0.1 --folder ./site --port 8080
+./localfs --host 127.0.0.1 --folder ./site --port 8080
 ```
 
 ### Bind to all interfaces (LAN access)
 ```bash
-./localserver --host 0.0.0.0 --folder ./site --port 8080
+./localfs --host 0.0.0.0 --folder ./site --port 8080
 ```
 
 Access locally via:
@@ -63,33 +63,33 @@ http://127.0.0.1:8080
 
 ### Open browser automatically
 ```bash
-./localserver --open --folder ./site
+./localfs --open --folder ./site
 ```
 
 ### Logging modes
 ```bash
-./localserver --verbose --folder ./site   # detailed logs
-./localserver --quiet --folder ./site     # minimal output
+./localfs --verbose --folder ./site   # detailed logs
+./localfs --quiet --folder ./site     # minimal output
 ```
 
 ### Enable directory listing
 ```bash
-./localserver --dir-list --folder ./site
+./localfs --dir-list --folder ./site
 ```
 
 ### Enable CORS
 ```bash
-./localserver --cors --folder ./site
+./localfs --cors --folder ./site
 ```
 
 ### Enable caching headers
 ```bash
-./localserver --cache --folder ./site
+./localfs --cache --folder ./site
 ```
 
 ### Route alias
 ```bash
-./localserver --folder ./site --route /assets=./shared-assets
+./localfs --folder ./site --route /assets=./shared-assets
 ```
 
 Then:
@@ -104,7 +104,7 @@ Serves:
 
 ### List config + port availability
 ```bash
-./localserver --folder ./site --port 8080 --list
+./localfs --folder ./site --port 8080 --list
 ```
 
 ---
@@ -131,12 +131,12 @@ verbose=true
 
 ### Run with config
 ```bash
-./localserver
+./localfs
 ```
 
 or:
 ```bash
-./localserver --config server.conf
+./localfs --config server.conf
 ```
 
 ---
