@@ -17,10 +17,10 @@
     - macOS-friendly --open support
 
     Build:
-        cc -Wall -Wextra -O2 main.c -o localserver -pthread
+        cc -Wall -Wextra -O2 main.c -o localfs -pthread
 
     Example:
-        ./localserver --folder ./site --port 8080
+        ./localfs --folder ./site --port 8080
 */
 
 #define _DARWIN_C_SOURCE
@@ -1066,7 +1066,7 @@ bad_bool:
 
 static void print_help(const char *program_name) {
     printf(
-        "localserver - CLI-first local static file server\n\n"
+        "localfs - CLI-first local static file server\n\n"
         "Usage:\n"
         "  %s --folder ./site\n"
         "  %s --folder ./site --port 8080\n"
