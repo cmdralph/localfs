@@ -1,5 +1,5 @@
 /*
-    localserver - CLI-first local HTTP static file server for macOS
+    localfs - CLI-first local HTTP static file server for macOS
 
     Features:
     - Serve up to 3 folders at the same time
